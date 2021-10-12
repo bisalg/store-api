@@ -1,0 +1,11 @@
+1. for numeric filters like ( >, <, =, >=, <= ) use : ?numericFilters=price>something&rating=something.
+
+2.for sorting use ?sort=name,price,rating etc. You can also use (-negative)sign like ?sort=-name to change the order.
+
+3. to see only select fields like only name and price use ?fields=name,price.
+
+4.for featured ?featured=true or false.
+
+5 there in total 23 documents but only 10 are displayed as limit is set 10 by default . you can change limit by passing ?limit=23 or whatever value as query
+
+6.you can also use ?page=number 
