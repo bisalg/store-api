@@ -23,7 +23,6 @@ const getAllProducts = async (req, res) => {
             /\b(>|<|>=|<=|=)\b/g,
             (match) => `-${operatormap[match]}-`
         )
-        console.log(filters)
         const options = ['price', 'rating']
         filters = filters.split(',').forEach(element => {
             const [field, operator, value] = element.split('-')
@@ -32,7 +31,6 @@ const getAllProducts = async (req, res) => {
             }
         });
     }
-    console.log(queryObject)
     let result = Model.find(queryObject)
     if (sort) {
         const sortlist = sort.split(',').join(' ')
